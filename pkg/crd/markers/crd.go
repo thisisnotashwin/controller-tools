@@ -50,6 +50,9 @@ var CRDMarkers = []*definitionWithHelp{
 	must(markers.MakeDefinition("kubebuilder:unservedversion", markers.DescribesType, UnservedVersion{})).
 		WithHelp(UnservedVersion{}.Help()),
 
+	must(markers.MakeDefinition("kubebuilder:xpreserveunknownfields", markers.DescribesType, XPreserveUnknownFields{})).
+		WithHelp(XPreserveUnknownFields{}.Help()),
+
 	must(markers.MakeDefinition("kubebuilder:topleveldesc", markers.DescribesType, TopLevelDesc{})).
 		WithHelp(TopLevelDesc{}.Help()),
 
